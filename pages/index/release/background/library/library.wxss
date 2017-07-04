@@ -1,0 +1,11 @@
+/* pages/index/release/background/library/library.wxss */
+.item{
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-wrap:wrap;
+    align-items: center;
+}
+.item_image{
+    margin: 20rpx;
+}

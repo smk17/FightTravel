@@ -1,0 +1,46 @@
+<!--pages/user/user.wxml-->
+<view wx:if="{{isLogin}}" class="container">
+    <view class="userinfo tap"  bindtap="onLogin">
+        <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+        <text class="userinfo-nickname" >{{userInfo.nickName}}</text>
+    </view>
+    <view class="proof-head">
+        <view class="proof-icon"></view>
+        <text class="proof-title">全部报名凭证</text>
+        <text class="proof-desc">报名了{{proof_list.length}}场活动</text>
+    </view>
+    <block wx:for="{{proof_list}}" wx:key="id">
+        <view class="proofinfo">
+            <view class="proofinfo-title">
+                <image class="proofinfo-title-icon" src="{{item.icon}}"></image>
+                <text class="proofinfo-title-txt">{{item.title}}</text>
+            </view>
+            <view id="{{item.id}}" class="proofinfo-desc" bindtap="proofdesc">
+                <image class="proof-desc-icon" src="{{item.desc.icon}}"></image>
+                <view class="proofinfo-desc-txt">
+                    <text class="proofinfo-desc-txt-title">{{item.desc.title}}</text>
+                    <text class="proofinfo-desc-txt-txt">{{item.desc.time}} 出发</text>
+                    <text class="proofinfo-desc-txt-txt">费用：{{item.desc.money}}</text>
+                </view>
+            </view>
+            <view class="proofinfo-status">
+                <text class="proofinfo-status-type">{{item.type}}</text>
+                <block wx:if="{{ item.status == 0 }}">
+                    <text class="proofinfo-status-tag">进行中</text>
+                    <view class="proofinfo-status-flex"></view>
+                    <button type="primary" size="mini">完成</button>
+                </block>
+                <block wx:elif="{{ item.status == 1 }}">
+                    <text class="proofinfo-status-tag">进行中</text>
+                    <view class="proofinfo-status-flex"></view>
+                    <button type="primary" style="margin-right: 10rpx;" size="mini">取消</button>
+                    <button type="warn" size="mini">去支付</button>
+                </block>
+            </view>
+        </view>
+    </block>
+</view>
+<view  wx:else class="container">
+    <text class="login-txt">微信号仅需登录一次即可</text>
+    <button type="primary" loading="{{loading}}" disabled="{{loading}}" bindtap="login" class="login-btn"> 微信登录 </button>
+</view>

@@ -1,0 +1,152 @@
+/* pages/user/user.wxss */
+.userinfo {
+  width: 100%;
+  margin-top: 40rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #fff;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  flex:1;
+  color: #aaa;
+}
+
+.userinfo-quit:active{
+  opacity: 0.5; 
+}
+
+.login-txt{
+  color: #dddddd;
+  font-size: 28rpx;
+  margin-top: 50%;
+}
+.login-btn{
+  margin-top: 50%;
+  width: 90%;
+}
+
+.proof-head{
+  width: 100%;
+  margin: 20rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.proof-icon{
+  height: 40rpx;
+  width: 10rpx;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  background-color: #2A88DF;
+}
+
+.proof-title{
+  flex: 1;
+  color: #aaa;
+  font-size: 36rpx;
+}
+
+.proof-desc{
+  color: #dddddd;
+  font-size: 36rpx;
+  margin-right: 10rpx;
+}
+
+.proofinfo{
+  width: 100%;
+  background-color: #fff;
+  margin-bottom: 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.proofinfo-title, .proofinfo-desc, .proofinfo-status{
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 10rpx 5%;
+}
+
+.proofinfo-title, .proofinfo-desc{
+  border-bottom: thin solid #dddddd;
+}
+
+.proofinfo-desc:active{
+  opacity: 0.5; 
+}
+
+.proofinfo-title-icon{
+  width: 30rpx;
+  height: 30rpx;
+  margin: 5rpx;
+}
+
+.proofinfo-title-txt{
+  flex: 1;
+  color: #aaa;
+  font-size: 32rpx;
+  margin: 20rpx 0;
+}
+
+.proof-desc-icon{
+  width: 40%;
+  height: 200rpx;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+  overflow: hidden;
+}
+
+.proof-desc-icon image{
+  max-width: 40%;
+}
+
+.proofinfo-desc-txt{
+  display: flex;
+  height: 200rpx;
+  flex-direction: column;
+  align-items: flex-start;
+  
+}
+
+.proofinfo-desc-txt-title{
+  flex: 1;
+  font-size: 36rpx;
+}
+
+.proofinfo-desc-txt-txt{
+  font-size: 28rpx;
+  color: #aaa;
+  margin-bottom: 10rpx;
+}
+
+.proofinfo-status-tag, .proofinfo-status-type {
+  font-size: 28rpx;
+  color: #aaa;
+  padding: 10rpx;
+  margin-right: 10rpx;
+  border-radius: 15%;
+}
+
+.proofinfo-status-flex{
+  flex: 1;
+}
+
+.proofinfo-status-tag{
+  border: thin solid #C9E6B9;
+}
+
+.proofinfo-status-type{
+  border: thin solid #2A88DF;
+}

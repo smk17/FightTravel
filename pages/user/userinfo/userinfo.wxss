@@ -1,0 +1,28 @@
+/* pages/user/userinfo/userinfo.wxss */
+.userinfo {
+  width: 100%;
+  margin-top: 40rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #fff;
+}
+.userinfo-avatar {
+  width: 96rpx;
+  height: 96rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+.userinfo text {
+  margin: 20rpx;
+  color: dimgray;
+  font-size: 32rpx;
+}
+.userinfo_text{
+  flex: 1;
+}
+.widget__arrow{
+    width: 32rpx;
+    height: 32rpx;
+    margin: 0 44rpx 0 12rpx;
+}

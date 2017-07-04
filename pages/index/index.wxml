@@ -1,0 +1,32 @@
+<!--index.wxml-->
+    <view class="top-tab">
+        <view class="select-city" bindtap="switchcity">
+            <text class="select-city-txt">{{city}}</text>
+            <image class="select-city-img" src="/image/arrowright.png"></image>
+        </view>
+        <scroll-view class="horizontal-scroll" scroll-x="true">
+            <block wx:for="{{type_list}}" wx:key="id">
+            <view id="{{item.id}}" bindtap="tabtap" class="horizontal-scroll-item {{item.select?'horizontal-scroll-item-select':''}}">
+                <text>{{item.name}}</text>
+            </view>
+            </block>
+      </scroll-view>
+      <view class="publish" bindtap="publish"><text>+</text></view>
+    </view>
+<scroll-view style="height: {{scrollHeight}}px; width: 100%;" scroll-y="true" scroll-top="{{scrollTop}}" bindscroll="scroll" bindscrolltolower="loadMore" bindscrolltoupper="refesh">
+    <view class="activity" wx:for="{{activity_list}}" wx:key="id">
+        <view class="activity-title">
+            <image class="activity-title-icon" src="{{item.icon}}"></image>
+            <text class="activity-title-txt">{{item.title}}</text>
+        </view>
+        <image class="activity-desc-icon" src="{{item.desc.icon}}"></image>
+        <view class="activity-desc-info">
+        <text>{{item.desc.title}}\n\n</text>
+        <text class="activity-desc-txt">{{item.desc.time}} 开始\n</text>
+        <view class="activity-desc">
+            <text class="activity-desc-txt">{{item.desc.location}}</text>
+            <text class="activity-desc-money">{{item.desc.money}}</text>
+        </view>
+        </view>
+    </view>
+</scroll-view>

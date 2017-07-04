@@ -1,0 +1,9 @@
+<!--pages/index/release/background/library/previewImage/previewImage.wxml-->
+<swiper style="height:{{windowHeight}}px" circular="true" current="{{index}}" bindchange="bindSwiperChange">
+  <block wx:for="{{images}}">
+    <swiper-item>
+      <image src="{{item}}" style="width:{{slide.width}}px;height:{{slide.height}}px;margin-top:{{slide.margintop}}px;"/>
+      <button id="{{index}}" type="primary" style="margin-top:{{slide.btnmargintop}}px;" class="swiper_btn" bindtap="bindAddBackground"> 确定添加海报 </button>
+    </swiper-item>
+  </block>
+</swiper>

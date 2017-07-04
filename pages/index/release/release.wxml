@@ -1,0 +1,91 @@
+<!--pages/index/release/release.wxml-->
+<view class="item item_height item_top tap" bindtap="bingScan">
+    <text class="item_index">用电脑发布{{type}}，体验更好更流畅</text>
+    <image class="widget__arrow" src="/image/arrowright.png" mode="aspectFill" />
+</view>
+<view  class="item item_height"></view>
+<image wx:if="{{backgroundUrl != ''}}" class="item-background" src="{{backgroundUrl}}" mode="aspectFill"></image>
+<form bindsubmit="formSubmit">
+    <view class="theme item item_height item_background">
+        <text class="item_text">{{type}}主题：</text>
+        <input name="input_theme" class="item_index item_font_size" />
+        <view class="item_separate"></view>
+        <navigator url="background/background">
+            <image class="item_img tap" src="../../../image/{{backgroundUrl == ''?'addBackground':'editBackground'}}.png"></image>
+        </navigator>
+    </view>
+    <view class="theme item item_height item_background">
+        <text class="item_text">{{type}}开始时间：</text>
+        <picker name="picker_start_date" class="item_index" mode="date" value="{{start_date}}" bindchange="bindStartDateChange">
+            <text>{{start_date}}</text>
+        </picker>
+        <picker name="picker_start_time" class="item_index" mode="time" value="{{start_time}}"  bindchange="bindStartTimeChange">
+            <text>{{start_time}}</text>
+        </picker>
+    </view>
+    <view class="item item_height item_background">
+        <text class="item_text">{{type}}开始时间：</text>
+        <picker name="picker_end_date" class="item_index" mode="date" value="{{end_date}}"  bindchange="bindEndDateChange">
+            <text>{{end_date}}</text>
+        </picker>
+        <picker name="picker_end_time" class="item_index" mode="time" value="{{end_time}}"  bindchange="bindEndTimeChange">
+            <text>{{end_time}}</text>
+        </picker>
+    </view>
+    <view class="item item_height item_background tap" bindtap="chooseLocation">
+        <text class="item_text">{{type}}集中地点：</text>
+        <view class="item_index" >
+            <text>{{location}}</text>
+        </view>
+    </view>
+    <view wx:if="{{isShowSite}}" class="item item_height item_background">
+        <input name="input_site"  class="item_index item_font_size" placeholder-class="item_text" placeholder="请输入{{type}}具体地点" value="{{site}}"/>
+    </view>
+    <view id="description" class="item item_textarea item_background">
+        <textarea bindblur="bindTextAreaBlur" value="{{TextArea}}" bindlinechange="bindTextAreaLineChange" bindfocus="bindTextAreaFocus" maxlength="-1" auto-height="{{descriptionAutoHeight}}"  name="textarea"  style="height:300rpx;" placeholder="{{type}}详细描述" />
+    </view>
+    <view class="item item_height item_background {{position}}">
+        <text class="item_img tap">B</text>
+        <image class="item_img tap" src="../../../image/Underlined.png"></image>
+        <text class="item_img tap">A</text>
+        <image class="item_img tap" src="../../../image/fontSize.png"></image>
+        <image class="item_img tap" src="../../../image/photo.png"></image>
+        <image class="item_img tap" src="../../../image/video.png"></image>
+        <view class="item_index"></view>
+        <button id="preview" size="mini" class="item_preview item_background item_protocol_text tap" formType="submit">预览</button>
+    </view>
+    <picker name="picker_type_index" bindchange="bindTypeTimeChange" value="{{type_index}}" range="{{type_array}}">
+        <view class="theme item item_height item_background tap" >
+            <text class="item_font_size item_index">{{type}}类型</text>
+            <text class="item_text">{{type_array[type_index]}}</text>
+            <image class="widget__arrow" src="/image/arrowright.png" mode="aspectFill" />
+        </view>
+    </picker>
+    <navigator url="cost/cost">
+        <view class="item item_height item_background tap">
+            <text class="item_font_size item_index">报名费用</text>
+            <image class="widget__arrow" src="/image/arrowright.png" mode="aspectFill" />
+        </view>
+    </navigator>
+    <navigator url="settings/settings">
+        <view class="item item_height item_background tap">
+            <text class="item_font_size item_index">报名设置</text>
+            <image class="widget__arrow" src="/image/arrowright.png" mode="aspectFill" />
+        </view>
+    </navigator>
+    <view class="theme item item_height item_background">
+        <text class="item_font_size item_index">允许{{appName}}推荐</text>
+        <switch name="switch_recommend" type="switch" checked="true" bindchange="recommendChange"/>
+    </view>
+    <view class="theme item item_height">
+        <switch name="checkbox_protocol" type="checkbox" checked="true" bindchange="agreeChange"/>
+        <text class="item_text">我同意</text>
+        <navigator url="protocol/protocol">
+            <text class="item_protocol_text tap">《{{appName}}服务协议》</text>
+        </navigator>
+    </view>
+    <view class="theme item item_height">
+        <button id="submit" type="primary" formType="submit" class="item_btn"> 发布 </button>
+    </view>
+    <view class="item_height"></view>
+</form>

@@ -1,0 +1,6 @@
+<!--pages/index/release/background/library/library.wxml-->
+<view class="item">
+    <block wx:for="{{images}}">
+        <image id="{{index}}" style="width:{{width}}px;height:{{height}}px;" class="item_image tap" bindtap="previewImage" src="{{item}}"></image>
+    </block>
+</view>

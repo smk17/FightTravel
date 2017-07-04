@@ -1,0 +1,18 @@
+<!--pages/user/userinfo/userinfo.wxml-->
+<view class="userinfo tap">
+  <text class="userinfo_text">头像</text>
+  <image class="userinfo-avatar" src="{{user.userInfo.avatarUrl}}" background-size="cover"></image>
+</view>
+<view class="userinfo tap">
+  <text class="userinfo_text">用户名</text>
+  <text>{{user.userInfo.nickName}}</text>
+</view>
+<navigator url="bindMobilePhoneNumber/bindMobilePhoneNumber" class="userinfo tap">
+  <text class="userinfo_text">绑定手机号</text>
+  <text>{{user.mobilePhoneNumber}}</text>
+  <image class="widget__arrow" src="/image/arrowright.png"></image>
+</navigator>
+<navigator url="bindLogInUser/bindLogInUser" wx:if="{{!user.mobilePhoneVerified}}" class="userinfo tap">
+  <text class="userinfo_text">绑定现有用户</text>
+  <image class="widget__arrow" src="/image/arrowright.png"></image>
+</navigator>

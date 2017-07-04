@@ -1,0 +1,58 @@
+/* pages/index/release/cost/cost.wxss */
+.theme{
+    margin-top: 40rpx;
+}
+.item{
+    width: 90%;
+    border-bottom: thin solid #E9E9F1;
+    display: flex;
+    align-items: center;
+    height: 84rpx;
+    padding: 0 5%;
+    background-color: white;
+    font-size: 32rpx;
+}
+.item_index{
+    flex: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.item_title{
+    width: 25%;
+    text-align: right;
+}
+.item_text{
+    margin: 0 20rpx;
+    font-size: 28rpx;
+    color: #aaa;
+}
+.item_placeholder{
+    font-size: 28rpx;
+    color: #aaa;
+}
+.item_addobj_view{
+    width: 96%;
+    padding: 0 2%;
+    margin-top: 20rpx;
+    display: flex;
+    align-items: center;
+}
+.item_addobj_view_text{
+    font-size: 32rpx;
+}
+.item_addobj_text{
+    color: #10AEFF;
+    flex: 1;
+}
+.delete_image{
+    position: relative;
+    right: 50rpx;
+    top: -40rpx;
+    width: 84rpx;
+    height: 84rpx;
+}
+.widget__arrow{
+    width: 32rpx;
+    height: 32rpx;
+}

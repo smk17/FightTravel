@@ -1,0 +1,39 @@
+<!--pages/user/proof/proof.wxml-->
+<view class="container">
+    <view class="qrcode-title">
+        <text>{{proofinfo.desc.title}}</text>
+    </view>
+    <view class="segmentation">
+        <view class="segmentation-raidal">
+            <view class="raidal4"></view>
+            <view class="raidal1"></view>
+        </view>
+        <view class="falling"><view class="border"></view></view>
+        <view class="segmentation-raidal">
+            <view class="raidal3"></view>
+            <view class="raidal2"></view>
+        </view>
+    </view>
+    <view class="qrcode-container">
+        <text>{{proofinfo.qrcode}}</text>
+        <image src="http://pan.baidu.com/share/qrcode?w=150&h=150&url={{proofinfo.qrcode}}"></image>
+        <view class="status">
+            <text>待确认</text>
+        </view>
+    </view>
+    <view class="container-list">
+    <view class="container-text">
+        <text>出发时间:<text class="container-txt">{{proofinfo.desc.time}}</text></text>
+    </view>
+    <view class="container-text">
+        <text>集中地点:<text class="container-txt">{{proofinfo.desc.location}}</text></text>
+    </view>
+    <view class="container-text">
+        <text>发起者:<text class="container-txt">{{proofinfo.title}}</text></text>
+        </view>
+    <view class="container-text">
+        <text>报名人:<text class="container-txt">{{proofinfo.applicant}}</text></text>
+    </view>
+    </view>
+</view>
+

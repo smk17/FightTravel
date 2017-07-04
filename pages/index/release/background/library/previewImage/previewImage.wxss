@@ -1,0 +1,5 @@
+/* pages/index/release/background/library/previewImage/previewImage.wxss */
+.swiper_btn{
+    width: 90%;
+    height: 92rpx;
+}

@@ -1,0 +1,25 @@
+/* pages/user/userinfo/bindMobilePhoneNumber/bindMobilePhoneNumber.wxss */
+.graySpace{
+  min-height: 100rpx;
+}
+.input_container{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30rpx;
+  margin-top: 15rpx;
+  background: #fff;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+}
+input, .input_text{
+  padding: 20rpx;
+}
+.text{
+  color: #aaa;
+  padding: 40rpx;
+  font-size: 32rpx;
+}
+.submit{
+  margin: 40rpx;
+}

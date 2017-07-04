@@ -1,0 +1,25 @@
+<!--pages/index/release/background/background.wxml-->
+<block wx:if="{{background}}">
+<view class="theme item tap" bindtap="albumImage" >
+    <text class="item_index">从手机相册选取</text>
+    <text class="item_text">建议图片尺寸900*520,小于4M</text>
+    <image class="widget__arrow" src="/image/arrowright.png" mode="aspectFill" />
+</view>
+<view class="item tap" bindtap="cameraImage" >
+    <text class="item_index">拍照</text>
+    <image class="widget__arrow" src="/image/arrowright.png" mode="aspectFill" />
+</view>
+<navigator url="library/library">
+    <view class="theme item tap">
+        <text class="item_index">海报模板库</text>
+        <image class="widget__arrow" src="/image/arrowright.png" mode="aspectFill" />
+    </view>
+</navigator>
+</block>
+<block wx:else>
+<view class="cutView" style="width:{{ scaleWidth }}px; height:{{ scaleHeight }}px">
+    <image style="margin-left: {{canvas.left}}px;margin-top: {{canvas.top}}px;width:{{canvas.width}}px;height:{{canvas.height}}px;" src="{{url}}" mode="{{mode}}"></image>
+</view>
+
+
+</block>

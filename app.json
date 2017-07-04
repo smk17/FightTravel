@@ -1,0 +1,52 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/user/user",
+    "pages/search/search",
+    "pages/user/proof/proof",
+    "pages/user/userinfo/userinfo",
+    "pages/user/userinfo/bindLogInUser/bindLogInUser",
+    "pages/user/userinfo/bindMobilePhoneNumber/bindMobilePhoneNumber",
+    "pages/index/detail/detail",
+    "pages/index/release/release",
+    "pages/index/release/background/background",
+    "pages/index/release/background/library/library",
+    "pages/index/release/background/library/previewImage/previewImage",
+    "pages/index/release/preview/preview",
+    "pages/index/release/cost/cost",
+    "pages/index/release/cost/refunds/refunds",
+    "pages/index/release/settings/settings",
+    "pages/index/release/protocol/protocol",
+    "pages/index/release/releaseok/releaseok",
+    "pages/index/switchcity/switchcity"
+  ],
+  "tabBar": {
+    "color": "#dddddd",
+    "selectedColor": "#2A88DF",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "iconPath": "image/index.png",
+      "selectedIconPath": "image/index_HL.png",
+      "text": "首页"
+    }, {
+      "pagePath": "pages/search/search",
+      "iconPath": "image/search.png",
+      "selectedIconPath": "image/search_HL.png",
+      "text": "搜索"
+    }, {
+      "pagePath": "pages/user/user",
+      "iconPath": "image/user.png",
+      "selectedIconPath": "image/user_HL.png",
+      "text": "我"
+    }]
+  },
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#f2f2f2",
+    "navigationBarTitleText": "伴你出游",
+    "navigationBarTextStyle":"black"
+  },
+  "debug": true
+}

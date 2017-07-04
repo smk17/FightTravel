@@ -1,0 +1,16 @@
+<!--pages/user/userinfo/bindMobilePhoneNumber/bindMobilePhoneNumber.wxml-->
+<form report-submit="true" bindsubmit="formSubmit" bindreset="formReset">
+  <view class="graySpace"></view>
+  <text class="text">手机号</text>
+  <view class="input_container">
+    <text class="input_text">+86</text>
+    <input name="phone" placeholder="请输入手机号" type="number" bindinput="onInputPhone" maxlength="11"/>
+  </view>
+  <text class="text">验证码</text>
+  <view class="input_container">
+    <input name="code" placeholder="请输入验证码" type="number" bindinput="onInputCode" maxlength="6"/>
+    <button size="mini" bindtap="onGetCode" disabled="{{codeDisabled}}">{{codename}}{{countdown}}</button>
+  </view>
+  <button class="submit" form-type="submit" type="primary" disabled="{{submitDisabled}}">绑定手机号</button>
+</form>
+<view id="toast" style="opacity: {{opacity}};">{{message}}</view>

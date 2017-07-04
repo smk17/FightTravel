@@ -1,0 +1,35 @@
+/* pages/index/release/background/background.wxss */
+.theme{
+    margin-top: 40rpx;
+}
+.item{
+    width: 90%;
+    height: 84rpx;
+    padding: 0 5%;
+    border-bottom: thin solid #E9E9F1;
+    background-color: white;
+    font-size: 32rpx;
+    display: flex;
+    align-items: center;
+}
+.item_index{
+    flex: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.item_text{
+    font-size: 24rpx;
+    color: #aaa;
+}
+.widget__arrow{
+    width: 32rpx;
+    height: 32rpx;
+}
+.cutView{
+    background-color: transparent;
+}
+.cutCanvas{
+    background-color: transparent;
+    border: 2rpx solid white;
+}
